@@ -8,7 +8,8 @@
     <meta name="author" content="Laucsap">
     <title>Actwu</title>
     <link rel="stylesheet" href="https://cordzip.github.io/cz.css">
-    </head>
+   <script src="https://cordzip.web.app/mew/e.js"></script>
+</head>
 <body>
     
 <section class="">
@@ -21,7 +22,7 @@
 
     <input id="a" class="black-txt" 
      cols="30" rows="5">
-     <a onclick="upt()" class="no-w item prim-bg">
+     <a onclick="update()" class="no-w item prim-bg">
         <p class="dark caps">Update</p>
     </a>
 
@@ -29,14 +30,7 @@
 </section>
 
 <script>
-    setTimeout(() => {
-        upt()
-    }, 100);
-
-    function upt() {
-           localStorage.setItem("a", document.getElementById("a").value);
-    document.getElementById("a-txt").innerText =  localStorage.getItem("a")
-    }
+    showdata()
 </script>
 
 </body>
