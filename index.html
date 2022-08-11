@@ -21,6 +21,9 @@
 
     <textarea name="" id="a" class="black-txt" 
      cols="30" rows="5"></textarea>
+     <a onclick="upt()" class="prim-bg">
+        <p class="dark caps">Update</p>
+    </a>
 
      </div>
 </section>
@@ -32,11 +35,7 @@
 
     function upt() {
            localStorage.setItem("a", document.getElementById("a").value);
-    document.getElementById("a-txt").innerText =  localStorage.getItem("a");
-
-        setTimeout(() => {
-            upt()
-        }, 100);
+    document.getElementById("a-txt").innerText =  localStorage.getItem("a")
     }
 </script>
 
