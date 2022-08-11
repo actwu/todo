@@ -12,7 +12,7 @@
 </head>
 <body>
     
-<section class="">
+<section id="page1">
     <div class="fullscreen bg hero white2">
         <p id="a-txt" class="dark-txt">
         Your Goals/Todo?
@@ -26,8 +26,25 @@
      <a onclick="update()" class="item prim-bg">
         <p class="dark caps">Update</p>
     </a>
+    <a onclick="page2()" class="danger"><i class="fa-solid fa-x"></i></a>
 
      </div>
+</section>
+
+<section id="page2" class="hide">
+    <div class="fullscreen item white2">
+        <div class="small-p white">
+            <p class="mid">
+                <a onclick="page1()" class="yell">
+                    <p class="dark">Back</p>
+                </a>
+                <a onclick="deldata()" class="danger">
+                    <p class="dark">Reset</p>
+                    <i class="fa-x fa-solid"></i>
+                </a>
+            </p>
+        </div>
+    </div>
 </section>
 
 <script>
