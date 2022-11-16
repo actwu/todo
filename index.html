@@ -8,45 +8,52 @@
     <meta name="author" content="Laucsap">
     <title>Actwu</title>
     <link rel="stylesheet" href="https://cordzip.github.io/cz.css">
-   <script src="https://cordzip.web.app/mew/e.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
+   <script src="https://cordzip.github.io/cz.js"></script>
 </head>
 <body>
     
-<section id="page1" class="fullscreen hero white2">
-<p class="caps dark">
-setagoal</p>
+<section id="page1" class="fullscreen hero dark-bg">
+
+  <div class="head space item">
+    <p class="caps white">
+        setagoal</p>
+      <a onclick="page2()" class="
+      btn danger">
+      <i class="fa-x small fa-solid"></i>
+      </a>
+
+     
+  </div>
     
        <div class="big-p pc-ui"></div>
-     <p id="a-txt" class="dark-txt">
+     <p id="a-txt">
         </p>
     
 
-    <div class="foot float layer03 no-w item">
+    <div class="foot float layer03 dark2 space2">
 
-    <textarea id="a" class="
-    black-txt"></textarea>
-     <a onclick="update()" class="center prim-bg">
+    <input id="a" class="small
+    dark2-bg" placeholder="List down..">
+     <a onclick="update()" class="btn center">
         <i class="fa-solid fa-paper-plane"></i>
     </a>
-    <a onclick="page2()" class="center danger">
-<i class="fa-solid fa-x"></i></a>
 
      </div>
 </section>
 
 
 <section id="page2" class="hide">
-        <div class="fullscreen hero white2 center">
+        <div class="fullscreen hero dark center">
         
-        <div class="card white center rounded">
-            <span class="space">
+        <div class="big-p dark2 center rounded">
+            <span class="space2 item">
                 <a onclick="page1()" class="btn yell">
-                    <p class="white">Back</p>
+                    <p class="dark">Back</p>
                 </a>
-                <a onclick="deldata()" class=" 
+                <a onclick="deldata()" class="
                 btn danger">
-                    <p class="white">Reset</p>
-                    <i class="fa-x small fa-solid"></i>
+                <i class="fa-x small fa-solid"></i>
                 </a>
             </span>
         </div>
@@ -56,6 +63,13 @@ setagoal</p>
 
 <script>
     showdata()
+
+
+function update() {
+    localStorage.setItem("a", document.getElementById("a").value);
+    document.getElementById("a-txt").innerText =  localStorage.getItem("a");
+}
+
 </script>
 
 </body>
